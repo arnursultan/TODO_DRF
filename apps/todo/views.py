@@ -25,4 +25,4 @@ class ToDoAllDeleteAPIViewSet(DestroyAPIView):
     def delete(self, request, *args, **kwargs):
         todo = ToDo.objects.filter(user=request.user)
         todo = [t for t in todo.delete()]
-        return Response({'delete' : 'Все задания удалены'})
+        return Response({'delete' : 'Все успешно удалено'})
